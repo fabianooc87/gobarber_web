@@ -127,7 +127,7 @@ const Profile: React.FC = () => {
         });
       }
     },
-    [addToast],
+    [addToast, updateUser],
   );
 
   return (
@@ -188,6 +188,3 @@ const Profile: React.FC = () => {
 };
 
 export default Profile;
-function userAuth(): { user: any } {
-  throw new Error('Function not implemented.');
-}
