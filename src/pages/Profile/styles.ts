@@ -20,6 +20,10 @@ export const Container = styled.div`
         height: 24px;
       }
     }
+
+    @media (max-width: 1185px) {
+      padding-left: 40px;
+    }
   }
 `;
 

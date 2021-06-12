@@ -32,7 +32,7 @@ export const HeaderContent = styled.div`
     }
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 710px) {
     > img {
       width: 100%;
       height: 100%;
@@ -74,20 +74,24 @@ export const Profile = styled.div`
     }
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 710px) {
     margin-left: 100px;
   }
 `;
 
 export const Content = styled.main`
+  padding-left: 30px;
+  padding-right: 30px;
   max-width: 1120px;
   margin: 64px auto;
   display: flex;
-  @media (max-width: 600px) {
+  @media (max-width: 710px) {
     flex-flow: column wrap-reverse;
     margin: 0;
     align-items: center;
     justify-content: center;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 `;
 
@@ -119,7 +123,7 @@ export const Schedule = styled.div`
     }
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 710px) {
     margin: 0;
     padding: 50px;
   }
@@ -293,7 +297,7 @@ export const Calendar = styled.aside`
     color: #232129 !important;
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 710px) {
     margin: 0;
     align-items: center;
     justify-content: center;
