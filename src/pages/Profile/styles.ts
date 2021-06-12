@@ -34,7 +34,7 @@ export const Content = styled.div`
   justify-content: center;
   width: 100%;
   max-width: 700px;
-  margin: -176px auto 0;
+  margin: 0 auto 0;
 
   form {
     margin: 80px 0;
@@ -65,6 +65,7 @@ export const Content = styled.div`
 
 export const AvatarInput = styled.div`
   margin-bottom: 32px;
+  margin-top: -176px;
   position: relative;
   width: 186px;
   align-self: center;
