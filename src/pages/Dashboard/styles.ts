@@ -9,6 +9,8 @@ export const Header = styled.header`
 `;
 
 export const HeaderContent = styled.div`
+  padding-left: 30px;
+  padding-right: 30px;
   max-width: 1120px;
   margin: 0 auto;
   display: flex;
@@ -28,6 +30,17 @@ export const HeaderContent = styled.div`
       width: 20px;
       height: 20px;
     }
+  }
+
+  @media (max-width: 600px) {
+    > img {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 50px;
+    }
+
+    flex-wrap: wrap;
+    justify-content: flex-end;
   }
 `;
 
@@ -60,12 +73,22 @@ export const Profile = styled.div`
       }
     }
   }
+
+  @media (max-width: 600px) {
+    margin-left: 100px;
+  }
 `;
 
 export const Content = styled.main`
   max-width: 1120px;
   margin: 64px auto;
   display: flex;
+  @media (max-width: 600px) {
+    flex-flow: column wrap-reverse;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 export const Schedule = styled.div`
@@ -94,6 +117,11 @@ export const Schedule = styled.div`
       background: #ff9000;
       margin: 0 8px;
     }
+  }
+
+  @media (max-width: 600px) {
+    margin: 0;
+    padding: 50px;
   }
 `;
 
@@ -263,5 +291,15 @@ export const Calendar = styled.aside`
     background: #ff9000 !important;
     border-radius: 10px;
     color: #232129 !important;
+  }
+
+  @media (max-width: 600px) {
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-bottom: 15px;
   }
 `;

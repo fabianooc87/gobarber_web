@@ -41,6 +41,7 @@ interface Appointment {
 
 const Dashboard: React.FC = () => {
   const { signOut, user } = useAuth();
+  console.log(logoImg);
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [currentMonth, setCurrentMonth] = useState(new Date());
 
