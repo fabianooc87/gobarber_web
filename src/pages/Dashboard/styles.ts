@@ -86,12 +86,12 @@ export const Content = styled.main`
   margin: 64px auto;
   display: flex;
   @media (max-width: 710px) {
-    flex-flow: column wrap-reverse;
+    flex-direction: column-reverse;
     margin: 0;
     align-items: center;
     justify-content: center;
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 0;
+    padding-right: 0;
   }
 `;
 
@@ -124,8 +124,12 @@ export const Schedule = styled.div`
   }
 
   @media (max-width: 710px) {
-    margin: 0;
-    padding: 50px;
+    h1 {
+      font-size: 22px;
+    }
+    margin: 0 0 30px 0;
+    padding: 0 15px;
+    width: calc(100% - 30px);
   }
 `;
 
@@ -298,7 +302,7 @@ export const Calendar = styled.aside`
   }
 
   @media (max-width: 710px) {
-    margin: 0;
+    margin: 15px 0 0 0;
     align-items: center;
     justify-content: center;
     width: auto;
