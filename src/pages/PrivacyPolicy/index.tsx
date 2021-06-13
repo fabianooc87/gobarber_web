@@ -1,8 +1,6 @@
 import React from 'react';
 import 'react-day-picker/lib/style.css';
 
-import { FiClock, FiPower } from 'react-icons/fi';
-import { Link } from 'react-router-dom';
 import { Container } from './styles';
 
 import privacyPolicy from '../../assets/politica_de_privacidade.pdf';
