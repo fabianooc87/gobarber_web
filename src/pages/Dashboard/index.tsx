@@ -147,10 +147,6 @@ const Dashboard: React.FC = () => {
               <Link to="/profile">
                 <strong>{user.name}</strong>
               </Link>
-
-              <Link to="/privacypolicy">
-                <strong>Política de Privacidade</strong>
-              </Link>
             </div>
           </Profile>
 
