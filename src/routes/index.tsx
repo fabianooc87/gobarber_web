@@ -10,6 +10,7 @@ import ResetPassword from '../pages/ResetPassword';
 
 import Profile from '../pages/Profile';
 import Dashboard from '../pages/Dashboard';
+import PrivacyPolicy from '../pages/PrivacyPolicy';
 
 const Routes: React.FC = () => (
   <Switch>
@@ -20,6 +21,7 @@ const Routes: React.FC = () => (
 
     <Route path="/profile" exact component={Profile} isPrivate />
     <Route path="/dashboard" component={Dashboard} isPrivate />
+    <Route path="/privacypolicy" component={PrivacyPolicy} isPrivate />
   </Switch>
 );
 

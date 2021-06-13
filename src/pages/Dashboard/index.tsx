@@ -90,7 +90,6 @@ const Dashboard: React.FC = () => {
             hourFormatted: format(parseISO(appointment.date), 'HH:mm'),
           };
         });
-        console.log(appointmentsFormatted);
         setAppointments(appointmentsFormatted);
       });
   }, [selectedDate]);
@@ -147,6 +146,10 @@ const Dashboard: React.FC = () => {
               <span>Bem-vindo,</span>
               <Link to="/profile">
                 <strong>{user.name}</strong>
+              </Link>
+
+              <Link to="/privacypolicy">
+                <strong>Política de Privacidade</strong>
               </Link>
             </div>
           </Profile>
