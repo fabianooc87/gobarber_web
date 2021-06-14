@@ -1,4 +1,5 @@
 import React, { createContext, useCallback, useContext, useState } from 'react';
+import jwt_decode from 'jwt-decode';
 import api from '../services/api';
 import avatar from '../assets/avatar.png';
 
@@ -26,6 +27,10 @@ interface AuthContextData {
   updateUser(user: User): void;
 }
 
+interface Token {
+  exp: number;
+}
+
 const AuthContext = createContext<AuthContextData>({} as AuthContextData);
 
 const AuthProvider: React.FC = ({ children }) => {
@@ -35,8 +40,11 @@ const AuthProvider: React.FC = ({ children }) => {
 
     if (token && user) {
       api.defaults.headers.authorization = `Bearer ${token}`;
+      const token_decoded: Token = jwt_decode(token);
+      const token_expired = Date.now() >= token_decoded.exp * 1000;
+      const user_object = !token_expired ? JSON.parse(user) : undefined;
 
-      return { token, user: JSON.parse(user) };
+      return { token, user: user_object };
     }
 
     return {} as AuthState;

@@ -9,6 +9,7 @@
     "date-fns": "^2.21.3",
     "filesize": "^6.1.0",
     "history": "^4.10.1",
+    "jwt-decode": "^3.1.2",
     "polished": "^4.1.1",
     "react": "^16.13.1",
     "react-day-picker": "^7.4.10",
