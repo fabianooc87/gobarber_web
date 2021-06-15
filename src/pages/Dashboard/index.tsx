@@ -40,10 +40,26 @@ interface Appointment {
 }
 
 const Dashboard: React.FC = () => {
+  const initial_date = (): Date => {
+    const today = new Date();
+    const initial = new Date();
+    // IF SUNDAY
+    if (today.getDay() === 0) {
+      initial.setDate(today.getDate() + 1);
+      return initial;
+    }
+    // IF SATURDAY
+    if (today.getDay() === 6) {
+      initial.setDate(today.getDate() + 2);
+      return initial;
+    }
+
+    return today;
+  };
   const { signOut, user } = useAuth();
-  console.log(logoImg);
-  const [selectedDate, setSelectedDate] = useState(new Date());
-  const [currentMonth, setCurrentMonth] = useState(new Date());
+
+  const [selectedDate, setSelectedDate] = useState(initial_date());
+  const [currentMonth, setCurrentMonth] = useState(initial_date());
 
   const [monthAvailability, setMonthAvailability] = useState<
     MonthAvailabilityItem[]
