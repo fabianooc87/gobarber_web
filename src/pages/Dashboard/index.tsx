@@ -3,10 +3,10 @@ import { isToday, format, isAfter } from 'date-fns';
 import ptBR from 'date-fns/locale/pt-BR';
 import DayPicker, { DayModifiers } from 'react-day-picker';
 import 'react-day-picker/lib/style.css';
-
 import { FiClock, FiPower } from 'react-icons/fi';
 import { parseISO } from 'date-fns/esm';
 import { Link } from 'react-router-dom';
+import avatar from '../../assets/avatar.png';
 import {
   Container,
   Header,
@@ -212,7 +212,7 @@ const Dashboard: React.FC = () => {
 
                 <div>
                   <img
-                    src={appointment.user.avatar_url}
+                    src={appointment.user.avatar_url || avatar}
                     alt={appointment.user.name}
                   />
 
@@ -237,7 +237,7 @@ const Dashboard: React.FC = () => {
 
                 <div>
                   <img
-                    src={appointment.user.avatar_url}
+                    src={appointment.user.avatar_url || avatar}
                     alt={appointment.user.name}
                   />
 
